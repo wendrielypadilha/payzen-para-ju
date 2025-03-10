@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Complementares</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_mais_informacoes.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        function editFields() {
+            const fields = document.querySelectorAll('.info-box input');
+            fields.forEach(field => {
+                if (field.disabled) {
+                    field.removeAttribute('disabled'); 
+                    field.style.backgroundColor = '#fff'; 
+                    field.style.border = '1px solid #ccc'; 
+                } else {
+                    field.setAttribute('disabled', 'true'); 
+                    field.style.backgroundColor = '#f0f0f0'; 
+                    field.style.border = 'none'; 
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="{{ url_for('busca_funcionario') }}" class="voltar-btn">
+                <span>&#8592;</span> Voltar
+            </a>
+            <h1>Informações Complementares</h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+
+        </div>
+
+        <!-- Formulário para editar e salvar informações complementares -->
+        <form method="POST" action="{{ url_for('mais_informacoes', id=funcionario['id']) }}">
+            <div class="content">
+                <div class="details">
+                    <!-- Horas trabalhadas -->
+                    <div class="info-box blue">
+                        <span>Horas trabalhadas</span>
+                        <input type="text" name="horas_trabalhadas" value="{{ funcionario['horas_trabalhadas'] }}" disabled>
+                    </div>
+                    <!-- Vale transporte -->
+                    <div class="info-box yellow">
+                        <span>Vale transporte</span>
+                        <input type="text" name="vale_transporte" value="{{ funcionario['vale_transporte'] }}" disabled>
+                    </div>
+                    <!-- IRRF -->
+                    <div class="info-box blue">
+                        <span>IRRF</span>
+                        <input type="text" name="irrf" value="{{ funcionario['irrf'] }}" disabled>
+                    </div>
+                    <!-- INSS -->
+                    <div class="info-box yellow">
+                        <span>INSS</span>
+                        <input type="text" name="inss" value="{{ funcionario['inss'] }}" disabled>
+                    </div>
+                    <!-- Vale alimentação -->
+                    <div class="info-box blue">
+                        <span>Vale alimentação</span>
+                        <input type="text" name="vale_alimentacao" value="{{ funcionario['vale_alimentacao'] }}" disabled>
+                    </div>
+                    <!-- Horas extras -->
+                    <div class="info-box yellow">
+                        <span>Horas Extras</span>
+                        <input type="text" name="horas_extras" value="{{ funcionario['horas_extras'] }}" disabled>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="button" class="edit-btn" onclick="editFields()">
+                        <i class="fas fa-edit"></i> Editar
+                    </button>
+                    <button type="submit" class="save-btn">
+                        <i class="fas fa-save"></i> Salvar
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="footer">
+            <img src="img/a-clean-modern-and-professional-logo-with-the-text-9eVuCq3pTGmzTziuuqdCaw-64NQXdd1Shq8dyQ7zRA6MQ-removebg-preview.png" alt="PAYZEN" class="logo-image">
+            <p>&copy; Todos os Direitos Reservados</p>
+        </div>
+    </div>
+</body>
+</html>

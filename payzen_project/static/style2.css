@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #222c41;
+    color: white;
+  }
+  
+  .voltar-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: grey;
+    color: yellow;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.voltar-btn:hover {
+    background-color: darkgray;
+}
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  header .logo {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  header .logo span {
+    color:  #f7de53;
+  }
+  
+  .content {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center; 
+    align-items: flex-start; 
+  }
+  
+  .payment-details {
+    width: 400px; 
+  }
+  
+  .history {
+    width: 400px; 
+    background-color: #222c41;
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+  }
+  
+   .section {
+    margin-bottom: 15px;
+  }
+  
+  .section label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .black-box {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+  }
+  
+  .total {
+    margin-top: 20px;
+  }
+  
+  .total span {
+    font-weight: bold;
+  }
+  
+  .yellow-box {
+    width: 100%;
+    height: 40px;
+    background-color:  #f7de53;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .history {
+    width: 300px;
+  }
+  
+  .history .name button {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .history-title {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .history-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .history-list li {
+    margin-bottom: 10px;
+  }
+  
+  .export {
+    margin-top: 20px;
+  }
+  
+  .export button {
+    background-color: rgb(4, 34, 167);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .export button:hover {
+    background-color: rgb(220, 221, 233);
+  }
+
+  .name .name-text {
+    color: #0011ff; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    padding: 5px; 
+}
+.input-box {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .input-box.blue {
+    background-color: #0b42a6;
+  }
+  
+  .input-box.yellow {
+    background-color: #f7de53;
+    color: black;
+  }
+  
+  .input-box::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .receipt {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 400px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .receipt h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .receipt p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .receipt hr {
+    margin: 10px 0;
+    border: 0.5px solid #ccc;
+  }
+  
+  

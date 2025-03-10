@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folha de Pagamento</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+  <a href="{{ url_for('busca_funcionario') }}" class="voltar-btn">
+    <span>&#8592;</span> Voltar
+  </a>    
+  <div class="container">
+    <header>
+      <h1>Folha de Pagamento</h1>
+      <div class="logo">PAY<span>Z</span>EN</div>
+    </header>
+    <div class="content">
+        <div class="payment-details">
+          <!-- Exibindo as informações complementares -->
+          <div class="section">
+            <label for="work-hours">Suas horas de trabalho</label>
+            <input type="number" id="work-hours" class="input-box blue" value="{{ funcionario['horas_trabalhadas'] }}" readonly>
+          </div>
+          <div class="section">
+            <label for="vale-transporte">Vale transporte</label>
+            <input type="number" id="vale-transporte" class="input-box yellow" value="{{ funcionario['vale_transporte'] }}" readonly>
+          </div>
+          <div class="section">
+            <label for="irrf">IRRF</label>
+            <input type="number" id="irrf" class="input-box blue" value="{{ funcionario['irrf'] }}" readonly>
+          </div>
+          <div class="section">
+            <label for="vale-alimentacao">Vale alimentação</label>
+            <input type="number" id="vale-alimentacao" class="input-box blue" value="{{ funcionario['vale_alimentacao'] }}" readonly>
+          </div>
+          <div class="section">
+            <label for="inss">INSS</label>
+            <input type="number" id="inss" class="input-box yellow" value="{{ funcionario['inss'] }}" readonly>
+          </div>
+          <div class="section">
+            <label for="extra-hours">Horas extras</label>
+            <input type="number" id="extra-hours" class="input-box yellow" value="{{ funcionario['horas_extras'] }}" readonly>
+          </div>
+          <div class="total">
+            <span>TOTAL</span>
+            <div class="yellow-box">
+              <!-- Exibindo o total calculado -->
+              R$ {{ funcionario['total_a_receber'] }}
+            </div>
+          </div>
+        </div>
+        <div class="history">
+            <div class="export">
+                <!-- Novo botão para gerar o holerite em PDF -->
+                <a href="{{ url_for('gerar_holerite', id=funcionario['id']) }}">
+                    <button>Exportar Holerite</button>
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Funcionário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Botão de Voltar -->
+    <a href="{{ url_for('home') }}" class="voltar">
+        <span>&#8592;</span> Voltar
+    </a>
+
+    <!-- Cabeçalho da Página -->
+    <div class="busca-container">
+        <h1>Buscar Funcionário</h1>
+
+        <!-- Campo de Busca -->
+        <div class="busca-bar">
+            <input type="text" id="searchInput" placeholder="Nome, CPF, Cargo...">
+            <span class="lupa">&#128269;</span> <!-- Ícone da lupa -->
+        </div>
+
+        <!-- Mensagem de "Não há funcionários cadastrados" -->
+        <p id="noResults" class="sem-funcionarios" style="display: {% if not funcionarios %}block{% else %}none{% endif %};">
+            Nenhum funcionário cadastrado.
+        </p>
+
+        <!-- Grid com os Resultados -->
+        <div class="funcionarios-grid">
+            {% for funcionario in funcionarios %}
+                <a href="{{ url_for('visualizar_funcionario', id=funcionario[0]) }}" class="funcionario-card">
+                    <div class="foto {% if loop.index is even %}azul{% else %}amarelo{% endif %}"></div>
+                    <h3 class="funcionario-nome">{{ funcionario[1] }}</h3>
+                    <p class="funcionario-cpf">CPF: {{ funcionario[2] }}</p>
+                    <p class="funcionario-cargo">Cargo: {{ funcionario[3] }}</p>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; Todos os Direitos Reservados</p>
+        <p>PayZen</p>
+    </footer>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function () {
+            let filter = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.funcionario-card');
+            let noResults = document.getElementById('noResults');
+            let found = false;
+
+            cards.forEach(card => {
+                let nome = card.querySelector('.funcionario-nome').textContent.toLowerCase();
+                let cpf = card.querySelector('.funcionario-cpf').textContent.toLowerCase();
+                let cargo = card.querySelector('.funcionario-cargo').textContent.toLowerCase();
+
+                if (nome.includes(filter) || cpf.includes(filter) || cargo.includes(filter)) {
+                    card.style.display = "block";
+                    found = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            noResults.style.display = found ? "none" : "block";
+        });
+    </script>
+</body>
+</html>

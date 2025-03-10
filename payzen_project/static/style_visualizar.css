@@ -1,0 +1,129 @@
+body {
+    background-color: #000c1f; /* Fundo azul escuro */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #d3d3d3; /* Fundo cinza claro */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+
+input[readonly] {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.form-buttons {
+    grid-column: span 2;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-excluir {
+    background-color: #dc3545;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.btn-excluir:hover {
+    background-color: #a71d2a;
+}
+
+.voltar {
+    margin-bottom: 20px;
+    color: #5a5a5a;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-decoration: solid;
+    text-align: left;
+}
+
+.voltar:hover {
+    text-decoration: none;
+    color: #ffe868;
+    transition: background-color 5s ease;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fffdfd;
+}
+
+.folha_pagamento_button {
+    background-color: rgb(85, 85, 253); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+.folha_pagamento_button a {
+    text-decoration: none; 
+    color: white; 
+}

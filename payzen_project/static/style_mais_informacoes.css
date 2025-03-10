@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000b24;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color:#dadada;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: grey;
+    color: yellow;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.voltar-btn:hover {
+    background-color: darkgray;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    justify-content: center; 
+}
+
+.name {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 10px; 
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.info-box {
+    width: 45%;
+    padding: 30px 15px 15px;
+    border-radius: 20px;
+    margin-bottom: 30px; 
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+.info-box span {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent; 
+    font-size: 17px;
+}
+
+.info-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.blue {
+    background-color: #0056b3;
+    color: rgb(0, 0, 0);
+}
+
+.yellow {
+    background-color: #f7de53;
+    color: rgb(0, 0, 0);
+}
+
+.payroll-button {
+    background-color: #f7de53;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer {
+    margin-top: 5px;
+    text-align: center;
+}
+.actions button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 12px;  
+    font-size: 0.7rem; 
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.actions button img.icon {
+    width: 15px; 
+    height: 15px;
+}
+.logo-image {
+    height: 150px;
+}
+.edit-btn {
+    background-color: #9dff8a;
+    color: #000000;
+}
+
+.delete-btn {
+    background-color: #ff6a6a;
+    color: #000000;
+}
