@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000b24;
+    background-color: #222c41;
     color: #000000;
     display: flex;
     align-items: center;
@@ -11,12 +11,12 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 70%;
     max-width: 800px;
-    background-color:#dadada;
+    background-color:#5688ce;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .header {
@@ -100,13 +100,13 @@ h1 {
 }
 
 .blue {
-    background-color: #0056b3;
-    color: rgb(0, 0, 0);
+    background-color: #023a75;
+    color: rgb(247, 244, 244);
 }
 
 .yellow {
     background-color: #f7de53;
-    color: rgb(0, 0, 0);
+    color: rgb(248, 243, 243);
 }
 
 .payroll-button {
@@ -118,11 +118,6 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.footer {
-    margin-top: 5px;
-    text-align: center;
 }
 .actions button {
     display: flex;
@@ -155,4 +150,49 @@ h1 {
 .delete-btn {
     background-color: #ff6a6a;
     color: #000000;
+}
+/* === RODAPÉ === */
+footer {
+    position: fixed; /* Fixa no final da tela */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Garante que ocupa toda a largura */
+    background-color:#396eb8;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.footer-content .icon-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content .icon-text a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-content .icon-text a:hover {
+    text-decoration: underline;
+}
+
+body {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-container {
+    flex: 1; 
 }

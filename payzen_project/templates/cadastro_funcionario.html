@@ -20,6 +20,30 @@
             background-color: #f8d7da;
             color: #721c24;
         }
+
+       /* Estilização da logo */
+       .logo-container {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .logo-container img {
+            width: 150px; /* Aumentei a largura da imagem */
+            height: auto; /* Mantém a proporção */
+            display: block;
+            margin: 0 auto; /* Centraliza a imagem */
+        }
+
+        /* Garantindo que os botões não aumentem */
+        .form-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px; /* Espaço entre os elementos */
+        }
+        .btn {
+            padding: 10px 20px; /* Mantendo o tamanho fixo dos botões */
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -70,6 +94,12 @@
             <!-- Botões -->
             <div class="form-actions">
                 <button type="button" class="btn" onclick="window.location.href='/busca'">Buscar funcionário</button>
+
+                  <!-- Logo no meio -->
+                  <div class="logo-container">
+                    <img src="static/img/logo.png" alt="Logo">
+                  </div>
+
                 <button type="submit" class="btn">Fazer cadastro</button>
             </div>
         </form>
@@ -77,7 +107,7 @@
     <footer>
         <div class="footer-content">
             <div class="icon-text">
-                <span class="material-symbols-outlined">mail</span>
+                <span class="material-symbols-outlined">e-mail</span>
                 <a href="mailto:payzen@gmail.com">payzen@gmail.com</a>
             </div>
             <div class="icon-text">
@@ -86,7 +116,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            © Powered by Python, HTML, CSS and SQLite3
+            © Powered by Python, HTML, CSS and SQLite3 ㅤ
         </div>
     </footer>
 </body>

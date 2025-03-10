@@ -13,19 +13,17 @@ body {
     position: relative;
 }
 
-
 /* === ESTILOS PARA LOGIN === */
 .login-container {
-    background-color: #130069;
+    background-color: #5688ce;
     text-align: center;
-    width: 90%;
-    max-width: 500px;
-    height: 35vh; /* Definindo 10% da altura da tela */
-    padding: 20px;
-    border-radius: 10px;
+    width: 170%; /* Aumentado */
+    max-width: 700px; /* Aumentado 5% */
+    height: 55vh; /* Aumentado 5% */
+    padding: 20px; /* Aumentado 5% */
+    border-radius: 10.5px; /* Aumentado 5% */
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
-
 
 .login-container h1 {
     font-size: 36px;
@@ -46,10 +44,10 @@ form label {
 }
 
 form input {
-    padding: 10px;
-    font-size: 16px;
+    padding: 20px; /* 5% menor que o botão amarelo */
+    font-size: 17px; /* Ajustando proporcionalmente */
     border: none;
-    border-radius: 5px;
+    border-radius: 4.75px; /* Ajustando proporcionalmente */
     outline: none;
     background-color: #0B0F1A;
     color: white;
@@ -60,7 +58,7 @@ form input::placeholder {
 }
 
 form button {
-    padding: 12px;
+    padding: 25px;
     font-size: 18px;
     font-weight: bold;
     color: #0B0F1A;
@@ -75,9 +73,12 @@ form button:hover {
     background-color: #FFCA28;
 }
 
+
+
+
 /* === ESTILOS PARA CADASTRO DE FUNCIONÁRIOS === */
 .cadastro-container {
-    background-color: #130069;
+    background-color: #5688ce;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -116,8 +117,8 @@ form button:hover {
     border-radius: 5px;
     border: none;
     font-size: 14px;
-    background-color: #0B0F1A;
-    color: white;
+    background-color:rgba(255, 255, 255, 0.2)
+    color:white
 }
 
 /* Botões */
@@ -148,7 +149,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #0A57C6;
+    background-color: #396eb8;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -180,7 +181,7 @@ footer {
 
 /* === ESTILOS PARA BUSCA DE FUNCIONÁRIOS === */
 .busca-container {
-    background-color: #130069;
+    background-color: #0A57C6;
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);

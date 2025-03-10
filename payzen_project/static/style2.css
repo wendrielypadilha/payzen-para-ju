@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:  #222c41;
+    background-color:  #5688ce;
     color: white;
   }
   
@@ -59,13 +59,6 @@ body {
     width: 400px; 
   }
   
-  .history {
-    width: 400px; 
-    background-color: #222c41;
-    border-radius: 10px;
-    padding: 20px;
-    color: black;
-  }
   
    .section {
     margin-bottom: 15px;
@@ -133,7 +126,7 @@ body {
   }
   
   .export button {
-    background-color: rgb(4, 34, 167);
+    background-color: #2e5386;
     color: white;
     border: none;
     padding: 10px 20px;

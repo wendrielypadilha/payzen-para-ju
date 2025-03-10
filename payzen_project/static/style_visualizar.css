@@ -1,5 +1,5 @@
 body {
-    background-color: #000c1f; /* Fundo azul escuro */
+    background-color: #222c41; /* Fundo azul escuro */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
 .container {
     max-width: 900px;
     margin: 50px auto;
-    background-color: #d3d3d3; /* Fundo cinza claro */
+    background-color:#b1bac7; /* Fundo cinza claro */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
@@ -126,4 +126,38 @@ footer {
 .folha_pagamento_button a {
     text-decoration: none; 
     color: white; 
+}
+/* === RODAPÉ === */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color:#396eb8;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.footer-content .icon-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content .icon-text a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-content .icon-text a:hover {
+    text-decoration: underline;
 }
